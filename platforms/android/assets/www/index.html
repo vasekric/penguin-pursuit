@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <script src="./lib/jquery-1.10.2.js"></script>
+        <script src="./src/Map.js"></script>
+        <script src="./src/Penguin.js"></script>
+        <script src="./src/Maze.js"></script>
+        <script src="./src/Line.js"></script>
+        <script src="./src/EnemyMoves.js"></script>
+        <script src="./src/VirtualJoystick.js"></script>
+        <title>Penguin Pursuite</title>
+    </head>
+    <body>
+        <div class="app">
+            <canvas id="canvas"></canvas>
+            <div id="container"></div>
+        </div>
+        <script>
+            var canvas = $('#canvas').get(0);
+            var context = canvas.getContext('2d');
+            //canvas.width = 400;
+            //canvas.height = 711;
+            canvas.width = $('body').width();
+            canvas.height = $('body').height();
+
+            context.fillStyle = "grey";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            var maze = new Maze();
+        </script>
+    </body>
+</html>
